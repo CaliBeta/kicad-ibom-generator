@@ -41,3 +41,4 @@ jobs:
           python -c "import kicad_ibom; print('Imported version:', kicad_ibom.__version__)"
           python -c "from kicad_ibom.finder import find_kicad_python, find_pcb_file; print('Finder OK')"
           python -c "from kicad_ibom.patches import apply_patches; print('Patches OK')"
+

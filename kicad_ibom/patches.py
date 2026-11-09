@@ -152,3 +152,4 @@ def apply_patches() -> dict:
         "via_width": via_ok,
         "ecad_parser": ecad_ok,
     }
+

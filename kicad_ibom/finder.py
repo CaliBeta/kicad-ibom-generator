@@ -226,3 +226,4 @@ def find_pcb_file(start_path: Optional[str] = None) -> Optional[Path]:
         return nested[0]
 
     return None
+

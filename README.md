@@ -229,15 +229,15 @@ Need end-to-end hardware development, rapid prototyping, or manufacturing optimi
 
 **CaliBeta** specializes in turn-key electronics design and embedded engineering:
 
-- 📐 **High-Density & High-Speed PCB Layout** (KiCad, Altium Designer)
-- 📡 **IoT & Embedded Systems Architecture** (ESP32, STM32, Nordic nRF, BLE, LoRaWAN)
+- 📐 **High-Density & High-Speed PCB Layout** (KiCad)
+- 📡 **IoT & Embedded Systems Architecture** (ESP32, STM32, BLE, LoRaWAN)
 - 🏭 **Design for Manufacturing & Assembly (DFM / DFA)** with JLCPCB, PCBWay, and European/US fabs.
 - ⚡ **Power Electronics & Analog Front-End (AFE) Design**
 - 🛠️ **Custom Hardware Automation & Testing Tooling**
 
 Ready to turn your schematic into a reliable, mass-production-ready hardware product?
 
-👉 **Get in touch:** [contact@calibeta.com](mailto:contact@calibeta.com)  
+👉 **Get in touch:** [info@calibeta.com](mailto:info@calibeta.com)  
 👉 **Website & Portfolio:** [calibeta.com](https://calibeta.com)  
 👉 **GitHub:** [@calibeta](https://github.com/calibeta)
 
@@ -248,3 +248,4 @@ Ready to turn your schematic into a reliable, mass-production-ready hardware pro
 This project is licensed under the [GNU General Public License v3.0](LICENSE) (GPL-3.0) to ensure full compatibility with the upstream [InteractiveHtmlBom](https://github.com/openscopeproject/InteractiveHtmlBom) ecosystem.
 
 *Contributions, bug reports, and pull requests are warmly welcome!*
+

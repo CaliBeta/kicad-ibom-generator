@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Universal CLI generator for KiCad Interactive HTML BOM with native KiCad 8 & 9+ headless bug fixes."
 readme = "README.md"
 authors = [
-    { name = "CaliBeta", email = "contact@calibeta.com" }
+    { name = "CaliBeta", email = "info@calibeta.com" }
 ]
 license = { text = "GPL-3.0-or-later" }
 classifiers = [
@@ -60,3 +60,4 @@ kicad-ibom = "kicad_ibom.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["kicad_ibom*"]
+
