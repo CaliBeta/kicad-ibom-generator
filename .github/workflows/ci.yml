@@ -1,0 +1,43 @@
+name: CI - Build & Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    name: Test on ${{ matrix.os }} (Python ${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies & package
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install .
+
+      - name: Validate CLI Installation
+        run: |
+          kicad-ibom --version
+          kicad-ibom --help
+
+      - name: Validate Module Imports
+        run: |
+          python -c "import kicad_ibom; print('Imported version:', kicad_ibom.__version__)"
+          python -c "from kicad_ibom.finder import find_kicad_python, find_pcb_file; print('Finder OK')"
+          python -c "from kicad_ibom.patches import apply_patches; print('Patches OK')"
