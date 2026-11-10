@@ -2,10 +2,11 @@
 
 <div align="center">
 
+[![CI](https://github.com/CaliBeta/kicad-ibom-generator/actions/workflows/ci.yml/badge.svg)](https://github.com/CaliBeta/kicad-ibom-generator/actions/workflows/ci.yml)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
 [![Python Version](https://img.shields.io/badge/Python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue?style=flat-square&logo=python)](https://python.org)
 [![KiCad Version](https://img.shields.io/badge/KiCad-8.0%20%7C%209.0%2B-5B9BD5?style=flat-square&logo=kicad)](https://www.kicad.org/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen?style=flat-square)](https://github.com/calibeta/kicad-ibom-generator)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen?style=flat-square)](https://github.com/CaliBeta/kicad-ibom-generator)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-green.svg?style=flat-square)](https://calibeta.com)
 
 **Universal Command-Line Generator for KiCad Interactive HTML BOM with Native KiCad 8 & 9+ Headless Bug Fixes.**
@@ -57,13 +58,13 @@ Install directly via `pip`:
 pip install kicad-ibom-generator
 
 # Or directly from GitHub
-pip install git+https://github.com/calibeta/kicad-ibom-generator.git
+pip install git+https://github.com/CaliBeta/kicad-ibom-generator.git
 ```
 
 For local development or editable installation:
 
 ```bash
-git clone https://github.com/calibeta/kicad-ibom-generator.git
+git clone https://github.com/CaliBeta/kicad-ibom-generator.git
 cd kicad-ibom-generator
 pip install -e .
 ```
@@ -202,7 +203,7 @@ jobs:
           sudo apt-get install -y --no-install-recommends kicad python3-kicad
 
       - name: Install kicad-ibom-generator
-        run: pip install git+https://github.com/calibeta/kicad-ibom-generator.git
+        run: pip install git+https://github.com/CaliBeta/kicad-ibom-generator.git
 
       - name: Generate PCBA Visualizer
         run: kicad-ibom MyBoard.kicad_pcb -o dist/assembly
