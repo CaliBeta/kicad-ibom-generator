@@ -327,15 +327,22 @@ def main() -> None:
     env["INTERACTIVE_HTML_BOM_CLI_MODE"] = "1"
     env["INTERACTIVE_HTML_BOM_NO_DISPLAY"] = "1"
 
-    # Ensure this package directory is on PYTHONPATH for child process
+    # Ensure this package directory is on PYTHONPATH and explicitly injected into sys.path
     pkg_root = str(Path(__file__).resolve().parent.parent)
     existing_pp = env.get("PYTHONPATH", "")
     env["PYTHONPATH"] = f"{pkg_root}{os.pathsep}{existing_pp}" if existing_pp else pkg_root
 
+    bootstrap_code = (
+        f"import sys; "
+        f"sys.path.insert(0, {repr(pkg_root)}); "
+        f"from kicad_ibom.cli import main; "
+        f"main()"
+    )
+
     cmd = [
         kicad_python,
-        "-m",
-        "kicad_ibom.cli",
+        "-c",
+        bootstrap_code,
         "--internal-run",
         str(pcb_path),
         "--dest-dir",
